@@ -34,12 +34,12 @@ public class MainForm {
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
                         .title("领地菜单")
-                        .content("§7领地基岩版菜单 ResidenceForm")
+                        .content("§7领地基岩菜单")
                         .button("领地传送")
                         .button("领地管理")
                         .button("领地创建")
                         .button("领地工具")
-                        .button("插件信息")
+                        .button("群:668476505")
                         .responseHandler((f, r) -> {
                             SimpleFormResponse response = f.parseResponse(r);
                             if (response.isCorrect()) {
@@ -278,7 +278,7 @@ public class MainForm {
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
                         .title("领地菜单")
-                        .content("§7领地基岩版菜单 ResidenceForm")
+                        .content("§7领地基岩菜单")
                         .button("查看当前领地边界")
                         .button("领地信息查询")
                         .button("返回领地主菜单")
@@ -334,11 +334,11 @@ public class MainForm {
         if (!FloodgateApi.getInstance().isFloodgatePlayer(uuid)) return;
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("插件信息")
-                        .content("§7领地基岩版兼容 ResidenceForm\n作者: RENaa_FD\n版本: 正式版 v1.0.0\n官网: https//rymc.ren/\nQQ群: 1029946156\n\n")
-                        .button("API信息")
-                        .button("BUG报告")
-                        .button("开源协议")
+                        .title("服务器信息")
+                        .content("§7")
+                        .button("群:668476505")
+                        .button("IP:mc.rmiao.com")
+                        .button("公益生存服")
                         .button("返回主菜单")
                         .responseHandler((f, r) -> {
                             SimpleFormResponse response = f.parseResponse(r);
@@ -362,8 +362,8 @@ public class MainForm {
         String floodgateVersion = floodgatePlugin == null ? "未知" : floodgatePlugin.getDescription().getVersion();
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("插件API信息")
-                        .content("§7ResidenceForm开发时使用的插件版本:\nFloodgate: 2.0-SNAPSHOT\nResidence: 5.0.3.0\n\n服务器插件版本:\nFloodgate: " + floodgateVersion + "\nResidence: " + residenceVersion + "\n\n")
+                        .title("腐竹留言")
+                        .content("§7暂无信息")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
@@ -374,8 +374,8 @@ public class MainForm {
         if (!FloodgateApi.getInstance().isFloodgatePlayer(uuid)) return;
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("BUG报告")
-                        .content("§7如你在使用本插件时发现相关BUG请前往插件开源仓库或QQ群报告\n\n地址: https://github.com/RenYuan-MC/ResidenceForm\nQQ群: 1029946156\n\n")
+                        .title("BUG提出")
+                        .content("§7Q群私聊腐竹")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
@@ -386,29 +386,8 @@ public class MainForm {
         if (!FloodgateApi.getInstance().isFloodgatePlayer(uuid)) return;
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("ResidenceForm 开源协议")
-                        .content("§7" +
-                                "MIT License\n" +
-                                "\n" +
-                                "Copyright (c) 2022 RenYuan-MC\n" +
-                                "\n" +
-                                "Permission is hereby granted, free of charge, to any person obtaining a copy " +
-                                "of this software and associated documentation files (the \"Software\"), to deal " +
-                                "in the Software without restriction, including without limitation the rights " +
-                                "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell " +
-                                "copies of the Software, and to permit persons to whom the Software is " +
-                                "furnished to do so, subject to the following conditions:\n" +
-                                "\n" +
-                                "The above copyright notice and this permission notice shall be included in all " +
-                                "copies or substantial portions of the Software.\n" +
-                                "\n" +
-                                "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR " +
-                                "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, " +
-                                "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE " +
-                                "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER " +
-                                "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, " +
-                                "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE " +
-                                "SOFTWARE.\n")
+                        .title("建议提出")
+                        .content("§7私聊腐竹提出")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
