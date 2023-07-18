@@ -39,7 +39,7 @@ public class MainForm {
                         .button("领地管理")
                         .button("领地创建")
                         .button("领地工具")
-                        .button("群:668476505")
+                        .button("服务器信息")
                         .responseHandler((f, r) -> {
                             SimpleFormResponse response = f.parseResponse(r);
                             if (response.isCorrect()) {
@@ -336,8 +336,8 @@ public class MainForm {
                 SimpleForm.builder()
                         .title("服务器信息")
                         .content("§7")
-                        .button("群:668476505")
-                        .button("IP:mc.rmiao.com")
+                        .button("QQ群:668476505")
+                        .button("腐竹留言")
                         .button("公益生存服")
                         .button("返回主菜单")
                         .responseHandler((f, r) -> {
@@ -362,8 +362,8 @@ public class MainForm {
         String floodgateVersion = floodgatePlugin == null ? "未知" : floodgatePlugin.getDescription().getVersion();
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("腐竹留言")
-                        .content("§7暂无信息")
+                        .title("qq群")
+                        .content("§7668476505")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
@@ -374,8 +374,8 @@ public class MainForm {
         if (!FloodgateApi.getInstance().isFloodgatePlayer(uuid)) return;
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("BUG提出")
-                        .content("§7Q群私聊腐竹")
+                        .title("服务器地址")
+                        .content("§7IP:mc.rmiao.com")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
