@@ -34,7 +34,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "dev"
         prerelease: false
-        title: "ResidenceForm 自动构建版本"
+        title: "ResidenceForm 自创版本"
         files: |
           target/ResidenceForm.jar
         
