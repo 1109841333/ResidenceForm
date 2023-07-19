@@ -336,7 +336,7 @@ public class MainForm {
                 SimpleForm.builder()
                         .title("服务器信息")
                         .content("§7")
-                        .button("QQ群:668476505")
+                        .button("QQ群:249512547")
                         .button("腐竹留言")
                         .button("公益生存服")
                         .button("返回主菜单")
@@ -362,8 +362,8 @@ public class MainForm {
         String floodgateVersion = floodgatePlugin == null ? "未知" : floodgatePlugin.getDescription().getVersion();
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
-                        .title("qq群")
-                        .content("§7668476505")
+                        .title("=群")
+                        .content("§7249512547")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
@@ -375,7 +375,7 @@ public class MainForm {
         FloodgateApi.getInstance().getPlayer(uuid).sendForm(
                 SimpleForm.builder()
                         .title("服务器地址")
-                        .content("§7IP:mc.rmiao.com")
+                        .content("§7IP:new.mcts.cc")
                         .button("返回")
                         .responseHandler((f, r) -> sendPluginInfoForm(player))
         );
